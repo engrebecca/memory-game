@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AlbumImg from "./components/Album";
+import Wrapper from "./components/Wrapper";
+import albums from "./albums.json";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Wrapper>
+            <h1 className="title">Friends List</h1>
+            <Album
+                image={friends[0].image}
+            />
+        </Wrapper>
+    );
 }
 
 export default App;
