@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
+import Footer from "./components/Footer";
 import AlbumImg from "./components/Album";
 import albums from "./albums.json";
 // import "./App.css";
@@ -69,6 +70,7 @@ class App extends Component {
                         />
                     ))}
                 </Container>
+                <Footer text="Music Album Memory Game"></Footer>
             </Wrapper>
         );
     }
