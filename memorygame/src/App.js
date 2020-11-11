@@ -35,12 +35,23 @@ class App extends Component {
             // Set mesage to display you guessed correct
             this.setState(state => ({
                 ...state,
+                albums: this.shuffleAlbums(state.albums),
                 clicked: state.clicked.add(selectAlbum),
                 highScore: Math.max(state.clicked.size, state.highScore),
                 message: "You guesed correct!"
             }))
         }
     };
+
+    shuffleAlbums = (albums) => {
+        for (let i = albums.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = albums[i];
+            albums[i] = albums[j];
+            albums[j] = temp;
+        }
+        return albums
+    }
 
     // Render navbar with title, message, score, and high score based this.state
     // Map over this.state.album and render a album image component for each album object
