@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import AlbumImg from "./components/Album";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Navbar from "./components/Navbar";
+import AlbumImg from "./components/Album";
 import albums from "./albums.json";
 // import "./App.css";
 
@@ -12,6 +13,7 @@ class App extends Component {
     state = {
         albums: albums,
         clicked: new Set(),
+        message: "Click an image to begin",
         highScore: 0
     };
 
@@ -42,6 +44,7 @@ class App extends Component {
     render() {
         return (
             <Wrapper>
+                <Navbar title="Music Album Memory Game" message={this.state.message} score={this.state.clicked.size} highScore={this.state.highScore} />
                 <Title>Music Album Memory Game</Title>
                 <span>Score: {this.state.clicked.size}</span>
                 <span>Top Score: {this.state.highScore}</span>
