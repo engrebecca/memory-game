@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
 import Navbar from "./components/Navbar";
 import AlbumImg from "./components/Album";
 import albums from "./albums.json";
@@ -23,19 +22,21 @@ class App extends Component {
         // Set this.state.clicked set includes the selected album, end game since it has been selected before
         if (this.state.clicked.has(selectAlbum)) {
             // End game and set this.state to include a new set that is empty to start a new game
+            // Set message to display you guessed incorrect
             this.setState(state => ({
                 ...state,
                 clicked: new Set(),
-                // Add logic for clicked correct/incorrect
+                message: "You guessed incorrect!"
             }))
         } else {
             // If this.state.clicked doesn't include the slected album, add the album to the clicked set 
             // Update high score to reflect either the number of correct albums selected or the existing high score, whichever is larger
+            // Set mesage to display you guessed correct
             this.setState(state => ({
                 ...state,
                 clicked: state.clicked.add(selectAlbum),
-                highScore: Math.max(state.clicked.size, state.highScore)
-                // Add logic for clicked correct/incorrect
+                highScore: Math.max(state.clicked.size, state.highScore),
+                message: "You guesed correct!"
             }))
         }
     };
@@ -45,9 +46,6 @@ class App extends Component {
         return (
             <Wrapper>
                 <Navbar title="Music Album Memory Game" message={this.state.message} score={this.state.clicked.size} highScore={this.state.highScore} />
-                <Title>Music Album Memory Game</Title>
-                <span>Score: {this.state.clicked.size}</span>
-                <span>Top Score: {this.state.highScore}</span>
                 {this.state.albums.map(album => (
                     <AlbumImg
                         key={album.id}
