@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Container from "./components/Container";
 import AlbumImg from "./components/Album";
 import albums from "./albums.json";
 // import "./App.css";
@@ -41,19 +42,22 @@ class App extends Component {
         }
     };
 
+    // Render navbar with title, message, score, and high score based this.state
     // Map over this.state.album and render a album image component for each album object
     render() {
         return (
             <Wrapper>
                 <Navbar title="Music Album Memory Game" message={this.state.message} score={this.state.clicked.size} highScore={this.state.highScore} />
-                {this.state.albums.map(album => (
-                    <AlbumImg
-                        key={album.id}
-                        name={album.name}
-                        image={album.image}
-                        onClick={() => this.validateClick(album.id)}
-                    />
-                ))}
+                <Container>
+                    {this.state.albums.map(album => (
+                        <AlbumImg
+                            key={album.id}
+                            name={album.name}
+                            image={album.image}
+                            onClick={() => this.validateClick(album.id)}
+                        />
+                    ))}
+                </Container>
             </Wrapper>
         );
     }

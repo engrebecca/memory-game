@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar(props) {
     return <nav class="navbar navbar-light bg-light">
-        {/* span and pass in props for title, score, and high score */}
+        {/* Spans that take in props for title, score, and high score based on state */}
         <span class="navbar-brand mb-0 h1">{props.title}</span>
         <span class="navbar-brand mb-0 h1">{props.message}</span>
         <span class="navbar-brand mb-0 h1">Score: {props.score} Top Score: {props.highScore}</span>

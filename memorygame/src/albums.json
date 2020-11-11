@@ -43,5 +43,20 @@
         "id": 9,
         "name": "Arcade Fire",
         "image": "https://upload.wikimedia.org/wikipedia/en/d/de/Neon_Bible_%28Front_Cover%29.jpg"
+    },
+    {
+        "id": 10,
+        "name": "The Black Keys",
+        "image": "https://consequenceofsound.net/wp-content/uploads/2014/04/black_keys_turn_blue_album_cover.png?w=807"
+    },
+    {
+        "id": 11,
+        "name": "The Shins",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/91hkOd0wmkL._SL1400_.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Bon Iver",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/5f/Bon_iver.jpg"
     }
 ]
