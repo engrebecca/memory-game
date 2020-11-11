@@ -15,7 +15,7 @@ class App extends Component {
     state = {
         albums: albums,
         clicked: new Set(),
-        message: "Click an image to begin",
+        message: "Test your memory and click images no more than once!",
         highScore: 0
     };
 

@@ -3,6 +3,7 @@ import "./style.css";
 
 function Jumbotron(props) {
     return (
+        // Jumbotron with that contains an image background
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
             </div>

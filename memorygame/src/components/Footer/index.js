@@ -3,6 +3,7 @@ import "./style.css";
 
 function Footer(props) {
     return (
+        // Sticky footer
         <footer className="footer mt-auto py-3 text-center">
             {props.text}
         </footer>
