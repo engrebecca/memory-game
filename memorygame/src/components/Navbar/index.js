@@ -1,8 +1,8 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 
 function Navbar(props) {
-    return <nav class="navbar navbar-light bg-light">
+    return <nav className="navbar fixed-top">
         {/* Spans that take in props for title, score, and high score based on state */}
         <span class="navbar-brand mb-0 h1">{props.title}</span>
         <span class="navbar-brand mb-0 h1">{props.message}</span>

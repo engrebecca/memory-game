@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
 import AlbumImg from "./components/Album";
@@ -60,6 +61,7 @@ class App extends Component {
         return (
             <Wrapper>
                 <Navbar title="Music Album Memory Game" message={this.state.message} score={this.state.clicked.size} highScore={this.state.highScore} />
+                <Jumbotron>Jumbotron</Jumbotron>
                 <Container>
                     {this.state.albums.map(album => (
                         <AlbumImg

@@ -2,9 +2,11 @@ import React from "react";
 import "./style.css";
 
 function Footer(props) {
-    return <footer className="footer">
-        {props.text}
-    </footer>;
+    return (
+        <footer className="footer mt-auto py-3 text-center">
+            {props.text}
+        </footer>
+    )
 }
 
 export default Footer;
