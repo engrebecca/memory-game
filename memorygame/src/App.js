@@ -6,7 +6,6 @@ import Container from "./components/Container";
 import Footer from "./components/Footer";
 import AlbumImg from "./components/Album";
 import albums from "./albums.json";
-// import "./App.css";
 
 class App extends Component {
     // Setting this.state.albums to the albums json array
